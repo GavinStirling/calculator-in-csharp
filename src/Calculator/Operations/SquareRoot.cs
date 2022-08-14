@@ -12,7 +12,25 @@ namespace Calculator
         override
         public double calculate()
         {
+            while (!isValidOperation())
+            {
+                Console.WriteLine("Cannot root with a negative number. Please try again...");
+                setFirstNum();
+            }
+
             return Math.Sqrt(getFirstNum());
+        }
+
+        public bool isValidOperation()
+        {
+            if (getFirstNum() < 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

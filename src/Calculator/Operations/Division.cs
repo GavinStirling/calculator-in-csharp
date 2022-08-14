@@ -1,3 +1,5 @@
+using System;
+
 namespace Calculator
 {
     public class Division : Operation
@@ -10,6 +12,13 @@ namespace Calculator
         override
         public double calculate ()
         {
+            while (!isValidOperation())
+            {
+                Console.WriteLine("Cannot divid by zero. Please try again...");
+                setSecondNum();
+
+            }
+
             return getFirstNum() / getSecondNum();
         }
 
