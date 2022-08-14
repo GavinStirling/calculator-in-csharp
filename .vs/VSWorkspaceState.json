@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\Calculator",
+    "\\src\\Calculator\\Operations",
+    "\\test",
+    "\\test\\Calculator.tests"
+  ],
+  "SelectedNode": "\\src\\Calculator\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}
