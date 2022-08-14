@@ -53,4 +53,30 @@ public class CalculatorTests
         // Assert
         Assert.Equal(35, actual);
     }
+
+    [Fact]
+    public void checkPower()
+    {
+        // Arrange
+        Operation power = new Power(2, 2);
+
+        // Act
+        double actual = power.calculate();
+
+        // Assert
+        Assert.Equal(4, actual);
+    }
+
+    [Fact]
+    public void checkSquareRoot()
+    {
+        // Arrange
+        Operation sqrt = new SquareRoot(81,0);
+
+        // Act
+        double actual = sqrt.calculate();
+
+        // Assert
+        Assert.Equal(9, actual);
+    }
 }

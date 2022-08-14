@@ -9,7 +9,7 @@
             while (isActive)
             {
                 Console.WriteLine("Welcome to the calculator. \nPlease choose an option from the below:");
-                Console.WriteLine("\n1: Addition \n2: Subtraction \n3: Division \n4: Multiplication \n5: Quit");
+                Console.WriteLine("\n1: Addition \n2: Subtraction \n3: Division \n4: Multiplication \n5: Power \n6: Square Root \n7: Quit");
                 
                 int userInput = int.Parse(Console.ReadLine());
                 
@@ -39,7 +39,18 @@
                         multiply.setSecondNum();
                         Console.WriteLine("The answer is: " + multiply.calculate());
                         break;
-                    case 5:
+                    case 5: 
+                        Operation power = new Power(0, 0);
+                        power.setFirstNum();
+                        power.setSecondNum();
+                        Console.WriteLine("The answer is: " + power.calculate());
+                        break;
+                    case 6:
+                        Operation sqrt = new SquareRoot(0, 0);
+                        sqrt.setFirstNum();
+                        Console.WriteLine("The answer is: " + sqrt.calculate());
+                        break;
+                    case 7:
                         Console.WriteLine("Goodbye...");
                         isActive = false;
                         break;
@@ -48,7 +59,6 @@
                         break;
                 }
             }
-
         }
     }
 }
